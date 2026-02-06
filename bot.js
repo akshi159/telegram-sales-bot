@@ -8,7 +8,7 @@ const bot = new TelegramBot(token, { polling: true });
 
 // GOOGLE AUTH
 const auth = new google.auth.GoogleAuth({
-  keyFile: 'telegram-sales-bot.json',
+  credentials: JSON.parse(process.env.GOOGLE_CREDENTIALS),
   scopes: ['https://www.googleapis.com/auth/spreadsheets']
 });
 
